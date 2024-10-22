@@ -9,7 +9,7 @@
 
 	<test name="chrometest">
 
-		<parameter name="os" value="Windows" />
+		<parameter name="os" value="Linux" />
 		<parameter name="browser" value="chrome" />
 
 		<classes>
@@ -19,7 +19,7 @@
 
 	<test name="edgetest">
 
-		<parameter name="os" value="Windows" />
+		<parameter name="os" value="Linux" />
 		<parameter name="browser" value="edge" />
 
 		<classes>
@@ -29,7 +29,7 @@
 
 	<test name="firefoxtest">
 
-		<parameter name="os" value="Windows" />
+		<parameter name="os" value="Linux" />
 		<parameter name="browser" value="firefox" />
 
 		<classes>

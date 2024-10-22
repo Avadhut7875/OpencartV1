@@ -22,7 +22,7 @@ public class TC004_AddToCartTest extends BaseClass {
 			logger.info("clicked on search button...");
 
 			SearchResultPage sp = new SearchResultPage(driver);
-			sp.clickAddToCart();
+			sp.clickFirstAddToCart();
 			logger.info("clicked on add to cart button...");
 
 			String msg = sp.msgHeading();
