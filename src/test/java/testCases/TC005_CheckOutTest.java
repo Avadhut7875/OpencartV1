@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import pageObjects.HomePage;
 import pageObjects.SearchResultPage;
-import pageObjects.ShoppingCart;
+import pageObjects.ShoppingCartPage;
 import testBase.BaseClass;
 
 public class TC005_CheckOutTest extends BaseClass {
@@ -40,7 +40,7 @@ public class TC005_CheckOutTest extends BaseClass {
 			Thread.sleep(1000);
 			logger.info("uploading file...");
 			sp.uploadFile();
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			logger.info("setting Date...");
 			sp.setDate();
 			Thread.sleep(1000);
@@ -74,11 +74,11 @@ public class TC005_CheckOutTest extends BaseClass {
 			logger.info("opening Shopping Cart...");
 			sp.openShoppingCart();
 			
-			ShoppingCart sc= new ShoppingCart(driver);
+			ShoppingCartPage sc= new ShoppingCartPage(driver);
 			
 			Thread.sleep(1000);
 			logger.info("Proving Shipping Details...");
-			sc.setShippingDetails("Angola", "3516", "21456");
+			sc.setShippingDetails("Angola", "129", "21456");
 			Thread.sleep(1000);
 			logger.info("clicking on get Quote Button...");
 			sc.getQuote();

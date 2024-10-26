@@ -51,4 +51,8 @@ public class HomePage extends BasePage {
 	public void clickSearchBtn() {
 		btnSearch.click();
 	}
+	
+	public void clearSearchBar() {
+		lnkSearch.clear();
+	}
 }

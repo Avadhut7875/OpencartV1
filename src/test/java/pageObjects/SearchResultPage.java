@@ -114,6 +114,7 @@ public class SearchResultPage extends BasePage {
 	@SuppressWarnings("deprecation")
 	public void uploadFile() {
 		uploadBtn.click();
+		
 		try {
 			Runtime.getRuntime().exec("../OpencartV1/autoIt/FileUpload_Opencart.exe");
 			wait.until(ExpectedConditions.alertIsPresent()).accept();

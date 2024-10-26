@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
-public class ShoppingCart extends BasePage {
+public class ShoppingCartPage extends BasePage {
 
-	public ShoppingCart(WebDriver driver) {
+	public ShoppingCartPage(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
@@ -51,15 +51,18 @@ public class ShoppingCart extends BasePage {
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	WebElement msgShippingSuccess;
 
+	@FindBy(xpath = "(//span[@id='cart-total'])[1]")
+	WebElement cartTotal;
+
 	public void setShippingDetails(String countryName, String stateValue, String pincode) throws InterruptedException {
 		lnkShippingDropDown.click();
 		Select select = new Select(selCountry);
 		select.selectByVisibleText(countryName);
 		Thread.sleep(1000);
 		try {
-		Select select2 = new Select(selState);
-		select2.selectByValue(stateValue);
-		}catch (Exception e) {
+			Select select2 = new Select(selState);
+			select2.selectByValue(stateValue);
+		} catch (Exception e) {
 			System.out.println(e);
 		}
 		textPincode.sendKeys(pincode);
@@ -87,7 +90,7 @@ public class ShoppingCart extends BasePage {
 
 		} catch (Exception e) {
 			return e.getMessage();
-			
+
 		}
 	}
 
@@ -105,6 +108,19 @@ public class ShoppingCart extends BasePage {
 
 	public void checkOut() {
 		checkoutBtn.click();
+
+	}
+
+	public int getItemCount() {
+		String string = cartTotal.getText();
+		System.out.println(string);
+		if (string.startsWith("1")) {
+			return 1;
+		} else if (string.startsWith("2")) {
+			return 2;
+		} else {
+			return 0;
+		}
 
 	}
 

@@ -14,18 +14,19 @@
 
 		<classes>
 
-			<class name="testCases.TC001_AccountRegistrationTest" />
-			<class name="testCases.TC002_LoginTest" />
-		<!-- 	<class name="testCases.TC003_LoginDDT" />  -->
-			<class name="testCases.TC004_AddToCartTest" />
-			<class name="testCases.TC005_CheckOutTest" />
+				<class name="testCases.TC001_AccountRegistrationTest" />				
+				<class name="testCases.TC002_LoginTest" />								
+			<!-- 	<class name="testCases.TC003_LoginDDT" />  -->
+				<class name="testCases.TC004_AddToCartTest" />							
+				<class name="testCases.TC005_CheckOutTest" />								
 
 			<!--    <class name="testCases.TC006_PasswordReset" />            			-->
 			<!--    <class name="testCases.TC007_ProfileUpdateTest" />        			-->
 
-			<class name="testCases.TC008_SearchProductTest" />
-			
-			<class name="testCases.TC009_ViewProductDetailsDescriptionTest" />
+				<class name="testCases.TC008_SearchProductTest" />						
+
+				<class name="testCases.TC009_ViewProductDetailsDescriptionTest" />		
+					<class name="testCases.TC010_AddMultipleItemsToCartTest" />			
 
 
 		</classes>
